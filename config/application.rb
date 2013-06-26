@@ -66,5 +66,14 @@ module Twitter404
           ENV[key.to_s] = value  
         end if File.exists?(env_file)
     end
+
+    # Twitter gem
+    Twitter.configure do |config|
+        config.consumer_key = ENV['TWIT_CONSUMER_KEY']
+        config.consumer_secret = ENV['TWIT_CONSUMER_SECRET']
+        config.oauth_token = ENV['TWIT_TOKEN']
+        config.oauth_token_secret = ENV['TWIT_SECRET']
+    end
+
   end
 end
