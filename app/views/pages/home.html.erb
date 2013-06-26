@@ -1,2 +1,5 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Tweets</h1>
+<p>latest three for mrdougwright:</p>
+  <% @tweets.each do |x| %>
+  <%= x %><br />
+  <% end %>
