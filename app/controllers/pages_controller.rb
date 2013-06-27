@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @tweets = GetTweets.get_tweets("I love Jane")
+    @tweets = GetTweets.get_tweets("404 page")
   end
 end
